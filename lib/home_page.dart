@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login/instagram_user.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -35,7 +36,18 @@ class _HomePageState extends State<HomePage> {
                     SizedBox(
                       width: 8,
                     ),
-                    Text("khurbanli"),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => InstagramUser()));
+                      },
+                      child: Text(
+                        "instagram_user",
+                        style: TextStyle(fontSize: 15),
+                      ),
+                    ),
                     Spacer(),
                     IconButton(
                       onPressed: () {},
