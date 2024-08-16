@@ -12,7 +12,15 @@ class _InstagramUserState extends State<InstagramUser> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("instagram_user"),
+        title: Text(
+          "instagram_user",
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.more_vert),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -31,15 +39,24 @@ class _InstagramUserState extends State<InstagramUser> {
                   ),
                   TextButton(
                     onPressed: () {},
-                    child: Text("post"),
+                    child: Text(
+                      "12\npost",
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                   TextButton(
                     onPressed: () {},
-                    child: Text("followers"),
+                    child: Text(
+                      "12,7k\nfollowers",
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                   TextButton(
                     onPressed: () {},
-                    child: Text("following"),
+                    child: Text(
+                      "570\nfollowing",
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ],
               ),

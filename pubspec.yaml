@@ -45,9 +45,9 @@ dev_dependencies:
 flutter_icons:
    ios: true
    android: true
-   image_path: "lib/icon/comment.png"
-   image_path_android: "lib/icon/like.png"
-   image_path_ios: "lib/icon/instagram.png"
+   image_path: "lib/icon/instagram.png"
+   image_path_android: "lib/icon/instagram.png"
+   
 
 
   # The "flutter_lints" package below contains a set of recommended lints to
