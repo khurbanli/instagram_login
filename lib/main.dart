@@ -102,6 +102,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           content: Text("Invalid username or password"),
                         ));
                       }
+                      _usernameController.text = "";
+                      _passwordController.text = "";
                     },
                     child: Text(
                       "LOG IN",
