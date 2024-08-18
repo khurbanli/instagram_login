@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Spacer(),
                     PopupMenuButton(
-                      icon: Image.asset("lib/icon/noqte.png"),
+                      icon: Icon(Icons.more_vert),
                       itemBuilder: (context) => [
                         PopupMenuItem(
                           value: 1,

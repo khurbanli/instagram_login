@@ -16,10 +16,97 @@ class _InstagramUserState extends State<InstagramUser> {
           "instagram_user",
         ),
         actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.more_vert),
-          ),
+          PopupMenuButton(
+              child: Icon(Icons.more_vert),
+              itemBuilder: (context) => [
+                    PopupMenuItem(
+                      value: 1,
+                      child: Text(
+                        "Block",
+                        style: TextStyle(color: Colors.red),
+                      ),
+                      onTap: () {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            backgroundColor: Colors.black54,
+                            duration: Duration(seconds: 1),
+                            content: Text(
+                              "Blocked !",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                    PopupMenuItem(
+                      value: 2,
+                      child: Text(
+                        "Report",
+                        style: TextStyle(color: Colors.red),
+                      ),
+                      onTap: () {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            backgroundColor: Colors.black54,
+                            duration: Duration(seconds: 5),
+                            content: Text(
+                              "Do you Report ?",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            action: SnackBarAction(
+                              label: "YES",
+                              textColor: Colors.red,
+                              onPressed: () {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text(
+                                      "Reported !",
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                    PopupMenuItem(
+                      value: 3,
+                      child: Text("Copy profile  URL"),
+                      onTap: () {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text(
+                              "Copyed !",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            backgroundColor: Colors.black54,
+                            duration: Duration(seconds: 1),
+                          ),
+                        );
+                      },
+                    ),
+                    PopupMenuItem(
+                      value: 4,
+                      child: Text("Shap profile"),
+                      onTap: () {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            duration: Duration(seconds: 2),
+                            content: Text(
+                              "Sent...",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                    PopupMenuItem(
+                      value: 5,
+                      child: Text("QR code"),
+                    ),
+                  ]),
         ],
       ),
       body: SingleChildScrollView(
