@@ -49,9 +49,68 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     Spacer(),
-                    IconButton(
-                      onPressed: () {},
+                    PopupMenuButton(
                       icon: Image.asset("lib/icon/noqte.png"),
+                      itemBuilder: (context) => [
+                        PopupMenuItem(
+                          value: 1,
+                          child: Row(
+                            children: [
+                              Icon(Icons.thumb_down),
+                              TextButton(
+                                child: Text("Not interesting"),
+                                onPressed: () {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      duration: Duration(seconds: 1),
+                                      content: Text("added to uninterested"),
+                                    ),
+                                  );
+                                },
+                              ),
+                            ],
+                          ),
+                        ),
+                        PopupMenuItem(
+                          value: 2,
+                          child: Row(
+                            children: [
+                              Icon(Icons.report),
+                              TextButton(
+                                child: Text("Report"),
+                                onPressed: () {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      duration: Duration(seconds: 1),
+                                      content: Text("complained"),
+                                    ),
+                                  );
+                                },
+                              ),
+                            ],
+                          ),
+                        ),
+                        PopupMenuItem(
+                          value: 3,
+                          child: Row(
+                            children: [
+                              Icon(Icons.block),
+                              TextButton(
+                                child: Text("Block"),
+                                onPressed: () {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      duration: Duration(seconds: 1),
+                                      content: Text(
+                                          "the account has been blocked !"),
+                                    ),
+                                  );
+                                },
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
