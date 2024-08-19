@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:login/instagram_user.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,6 +19,16 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.white70,
         title: Text("instagram"),
+        actions: [
+          IconButton(
+            icon: Image.asset("lib/icon/likeN.png"),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Image.asset("lib/icon/chat1.png"),
+            onPressed: () {},
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Center(
@@ -124,7 +135,7 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     IconButton(
                       onPressed: () {},
-                      icon: Image.asset("lib/icon/like.png"),
+                      icon: Image.asset("lib/icon/likeN.png"),
                     ),
                     IconButton(
                       onPressed: () {},

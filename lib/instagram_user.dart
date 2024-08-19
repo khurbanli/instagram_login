@@ -17,7 +17,10 @@ class _InstagramUserState extends State<InstagramUser> {
         ),
         actions: [
           PopupMenuButton(
-              child: Icon(Icons.more_vert),
+              child: Padding(
+                padding: EdgeInsets.only(right: 8.0),
+                child: Icon(Icons.more_vert),
+              ),
               itemBuilder: (context) => [
                     PopupMenuItem(
                       value: 1,
@@ -59,6 +62,7 @@ class _InstagramUserState extends State<InstagramUser> {
                               onPressed: () {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
+                                    duration: Duration(seconds: 1),
                                     content: Text(
                                       "Reported !",
                                       style: TextStyle(color: Colors.white),

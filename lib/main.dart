@@ -110,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         String username = _usernameController.text;
                         String password = _passwordController.text;
                         if (username == "admin" && password == "123456") {
-                          Navigator.push(
+                          Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
                                   builder: (context) => HomePage()));
