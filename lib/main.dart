@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login/home_page.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,6 +8,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,17 +18,17 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MyHomePage(),
+      home: LoginScren(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class LoginScren extends StatefulWidget {
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<LoginScren> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<LoginScren> {
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
   final fromKey = GlobalKey<FormState>();

@@ -165,27 +165,31 @@ class _InstagramUserState extends State<InstagramUser> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
+                  Expanded(
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blue,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
                       ),
-                    ),
-                    onPressed: () {},
-                    child: Text(
-                      "Follow",
-                      style: TextStyle(color: Colors.white),
+                      onPressed: () {},
+                      child: Text(
+                        "Follow",
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
+                  Expanded(
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
                       ),
+                      onPressed: () {},
+                      child: Text("Message"),
                     ),
-                    onPressed: () {},
-                    child: Text("Message"),
                   ),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -198,6 +202,110 @@ class _InstagramUserState extends State<InstagramUser> {
                   ),
                 ],
               ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 20),
+              child: Row(
+                children: [
+                  ClipOval(
+                    child: Image.asset(
+                      "lib/image/newhg.jpeg",
+                      width: 60,
+                      height: 60,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 20),
+              child: Row(
+                children: [Text("highlight")],
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                IconButton(
+                    onPressed: () {}, icon: Image.asset("lib/icon/reels.png")),
+                IconButton(
+                    onPressed: () {}, icon: Image.asset("lib/icon/user.png")),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Expanded(
+                  child: GestureDetector(
+                    onDoubleTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => InstagramUser()));
+                    },
+                    child: Container(
+                      width: 110,
+                      height: 110,
+                      child: Image.asset(
+                        "lib/image/car1.jpg",
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    width: 110,
+                    height: 110,
+                    child: Image.asset(
+                      "lib/image/car2.jpg",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    width: 110,
+                    height: 110,
+                    child: Image.asset(
+                      "lib/image/car3.jpg",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Expanded(
+                    child: Container(
+                  width: 110,
+                  height: 110,
+                  child: Image.asset(
+                    "lib/image/car4.jpg",
+                    fit: BoxFit.cover,
+                  ),
+                )),
+                Expanded(
+                    child: Container(
+                  width: 110,
+                  height: 110,
+                  child: Image.asset(
+                    "lib/image/car5.jpg",
+                    fit: BoxFit.cover,
+                  ),
+                )),
+                Expanded(
+                    child: Container(
+                  width: 110,
+                  height: 110,
+                  child: Image.asset(
+                    "lib/image/car6.jpg",
+                    fit: BoxFit.cover,
+                  ),
+                )),
+              ],
             )
           ],
         ),

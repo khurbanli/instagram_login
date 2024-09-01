@@ -12,6 +12,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  /*int _selectedIndex = 0;
+  final List<Widget> _widgetOptions = [
+    Text('Home Screen'),
+    Text('Search Screen'),
+    Text('Profile Screen'),
+  ];*/
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,6 +41,7 @@ class _HomePageState extends State<HomePage> {
         child: Center(
           child: Column(
             children: [
+              //_widgetOptions.elementAt(_selectedIndex),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
@@ -164,6 +172,20 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
+      /*bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: Image.asset("lib/icon/user.png"),
+            label: "Profile",
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        onTap: (index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
+      ),*/
     );
   }
 }
